@@ -1,1 +1,194 @@
+/* ===== GENERAL STYLES ===== */
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #7b2d26;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 20px;
+}
+
+h2 {
+    color: #7b2d26;
+}
+
+
+/* ===== NAVIGATION - FLEX ===== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background-color: #a94438;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+
+/* ===== HOVER ===== */
+
+nav a:hover {
+    background-color: #54201c;
+    transform: scale(1.1);
+}
+
+
+/* ===== SKIP LINK - POSITION + FOCUS ===== */
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+/* ===== MAIN ===== */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* ===== IMAGES - BOX MODEL ===== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #7b2d26;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+/* ===== HOME PAGE GRID ===== */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.food-grid article {
+    background-color: white;
+    border: 2px solid #d9a066;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+/* ===== GALLERY GRID ===== */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+
+/* ===== NTH-CHILD ===== */
+
+.gallery img:nth-child(even) {
+    border-radius: 50px 10px 50px 10px;
+}
+
+.gallery img:nth-child(odd) {
+    border-radius: 10px 50px 10px 50px;
+}
+
+
+/* ===== ABOUT PAGE ===== */
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    padding: 30px;
+    border: 2px solid #d9a066;
+    border-radius: 20px;
+}
+
+.about-section div {
+    flex: 1;
+}
+
+.about-section img {
+    width: 45%;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background-color: #7b2d26;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 700px) {
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-section img {
+        width: 100%;
+    }
+}
